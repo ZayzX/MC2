@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="mc2.png" alt="Minecraft 2 Mod logo" width="180" />
+  <img src="MC2.png" alt="Minecraft 2 Mod logo" width="180" />
 
   # Minecraft 2 Mod
 
