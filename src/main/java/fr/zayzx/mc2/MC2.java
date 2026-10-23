@@ -7,13 +7,15 @@ import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fr.zayzx.mc2.init.ItemMod;
+import fr.zayzx.mc2.utils.Reference;
+
 public class MC2 implements ModInitializer {
-	public static final String MOD_ID = "mc2";
 
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Logger LOGGER = LoggerFactory.getLogger(Reference.MOD_ID);
 
 	@Override
 	public void onInitialize() {
@@ -22,9 +24,11 @@ public class MC2 implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+
+		ItemMod.register();
 	}
 
 	public static ResourceLocation id(String path) {
-		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+		return ResourceLocation.fromNamespaceAndPath(Reference.MOD_ID, path);
 	}
 }
